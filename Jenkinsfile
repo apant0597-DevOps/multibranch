@@ -1,19 +1,21 @@
+
 pipeline {
-  agent {
-    docker {
-      image 'nginx:1.14.2-alpine'
-      args '-u root'
+    agent {
+        docker {
+            image 'nginx:1.14.2-alpine'
+            args '-u root'
+        }
     }
-  }
-  stages {
-    stage ('CHECK VERSION') {
-      steps {
-        sh 'nginx -v'
-      }
+    stages {
+        stage('CHECK VERSION'){
+            steps{
+                sh 'nginx -v'
+            }
+        }
     }
-  } post {
-    success {
-      sh 'echo SUCCESS!!!'
+    post {
+        success {
+            sh 'echo BUILD SUCCESS!!!'
+        }
     }
-  }
 }
