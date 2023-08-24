@@ -2,7 +2,7 @@
 pipeline {
     agent {
         docker {
-            image 'nginx:1.14.2-alpine'
+            image 'node:16.3.0-alpine'
             args '-u root'
         }
     }
