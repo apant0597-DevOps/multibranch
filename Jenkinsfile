@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image "nginx:1.14.2-alpine"
-      args "-u root"
+      image 'nginx:1.14.2-alpine'
+      args '-u root'
     }
   }
   stages {
