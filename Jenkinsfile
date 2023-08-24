@@ -1,14 +1,14 @@
 pipeline {
   agent {
     docker {
-      image "nginx:1.14.2-alpine"
-      args "-u root"
+      image 'maven:3-alpine'
+      args '-u root'
     }
   }
   stages {
     stage ('CHECK VERSION') {
       steps {
-        sh 'nginx -v'
+        sh 'java -v'
       }
     }
   } post {
