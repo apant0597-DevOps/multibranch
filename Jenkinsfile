@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('CHECK VERSION'){
             steps{
-                sh 'nginx -v'
+                sh 'java -version'
             }
         }
     }
